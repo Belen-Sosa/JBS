@@ -17,6 +17,14 @@ export const Projects = () => {
       imgUrl: projImg1,
       github: "https://github.com/Belen-Sosa/sistemaGestion"
 
+    },
+    {
+      title: "JBS",
+      description: "Pagina personal.",
+      tools: "HTML, CSS, BOOTSTRAP,REACTJS ",
+      imgUrl: projImg2,
+      github: "https://github.com/Belen-Sosa/JBS"
+
     }
    
   ];
@@ -44,11 +52,11 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" >
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      <Row >
                         {
                           projects.map((project, index) => {
                             return (
-                              <ProjectCard
+                              <ProjectCard  
                                 key={index}
                                 {...project}
                                 />

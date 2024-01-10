@@ -49,6 +49,9 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
+            
+
+
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -62,17 +65,17 @@ export const Banner = () => {
 Comprometida con aprender y crecer en el campo.
 Creativa, resuelta y lista para contribuir en un entorno
 laboral que fomente la innovación y el aprendizaje
+
 continuo.</p>
-                  <button onClick={() => console.log('connect')}> Charlemos <ArrowRightCircle size={25} /></button>
+
+
               </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                 
-                </div>}
+            
+               
             </TrackVisibility>
           </Col>
         </Row>
