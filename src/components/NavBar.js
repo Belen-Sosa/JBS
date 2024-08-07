@@ -34,7 +34,7 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/JBS/">
           <h1 className="logo">JBS</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
