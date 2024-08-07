@@ -2,10 +2,10 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.jpg";
 import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg3 from "../assets/img/project-img3.JPG";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+
 
 export const Projects = () => {
 
@@ -21,11 +21,21 @@ export const Projects = () => {
     {
       title: "JBS",
       description: "Pagina personal.",
-      tools: "HTML, CSS, BOOTSTRAP,REACTJS ",
+      tools: "HTML | CSS | BOOTSTRAP | REACTJS ",
       imgUrl: projImg2,
       github: "https://github.com/Belen-Sosa/JBS"
 
     }
+    ,
+    {
+      title: "SEE",
+      description: "Sistema de Encuestas y Estadisticas.",
+      tools: "Laravel | Laravel Jetstream | Inertia | Spatie | Vue3 | Pinia | Vue-Icons | JavaScript | Tailwind CSS | CSS | JsPDF | html2canvas | MySql| Patron MVC |...",
+      imgUrl: projImg3,
+      github: "https://github.com/Belen-Sosa/JBS"
+
+    }
+   
    
   ];
 

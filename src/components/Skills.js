@@ -5,11 +5,10 @@ import meter_jquery from "../assets/img/meter-jquery.png";
 import meter_mysql from "../assets/img/meter-mysql.webp";
 import meter_react from "../assets/img/meter-reactjs.jpg";
 import meter_css from "../assets/img/meter-css.png";
+import meter_laravel from "../assets/img/meter-laravel.jpg";
+import meter_vue from "../assets/img/meter-vue.png";
 import meter_github from "../assets/img/meter-git.jpg";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -72,22 +71,23 @@ export const Skills = () => {
               </Col>
               <Col sm={3}>
               <div className="item">
-                  <img src={meter_jquery}  className="img" alt="Image" />
-                  <h3>JQUERY</h3>
+                  <img src={meter_laravel} className="img" alt="Image" />
+                  <h3>LARAVEL</h3>
                 </div>
                
               </Col>
               <Col sm={3}>
               <div className="item">
-                  <img src={meter_react}   className="img" alt="Image" />
-                  <h3>REACTJS</h3>
+                  <img src={meter_vue} className="img" alt="Image" />
+                  <h3>Vue3</h3>
                 </div>
                
               </Col>
+             
               </Row>
               <Row className="mb-4">
               <Col sm={3}>
-              <div className="item">
+                 <div className="item">
                   <img src={meter_html}  className="img" alt="Image" />
                   <h3>HTML5</h3>
                 </div>
@@ -112,6 +112,23 @@ export const Skills = () => {
               <div className="item">
                   <img src={meter_github} className="img" alt="Image" />
                   <h3>Git/GitHub</h3>
+                </div>
+               
+              </Col>
+              </Row>
+              
+              <Row className="mb-4"> 
+              <Col sm={3}>
+              <div className="item">
+                  <img src={meter_jquery}  className="img" alt="Image" />
+                  <h3>JQUERY</h3>
+                </div>
+               
+              </Col>
+              <Col sm={3}>
+              <div className="item">
+                  <img src={meter_react}   className="img" alt="Image" />
+                  <h3>REACTJS</h3>
                 </div>
                
               </Col>
