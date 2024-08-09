@@ -22,6 +22,7 @@ body {
   font-family: 'Centra', sans-serif !important;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -63,6 +64,8 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
+  box-sizing: border-box; /* Esto asegura que el padding no afecte el ancho total */
+  overflow-x: hidden; /* Asegura que no haya contenido que cause scroll horizontal */
 }
 nav.navbar.scrolled {
   padding: 0px 0;
@@ -638,6 +641,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   }
 
+
+  nav.navbar {
+    padding: 18px 0;
+
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition:  0.32s ease-in-out;
+  }
+
  
   
 
@@ -686,3 +699,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   
 }
+
+body, html {
+  overflow-x: hidden; /* Oculta el desbordamiento horizontal en el body y html */
+}
+
+
+
