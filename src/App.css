@@ -563,9 +563,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   nav.navbar .navbar-nav .nav-link.navbar-link {
     padding: 0 15px;
-    padding-top: 1% ;
-
-    font-size: 10px;
+    padding-top: 3% ;
+    font-size: 15px;
   }
 
   /* Ajustar los botones */
@@ -681,7 +680,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-left: 43%;
   }
  
-  
+  .hidden {
+    display: none; /* Puedes cambiar esto a visibility: hidden; o cualquier otra opción según tus necesidades */
+  }
 }
 
 body, html {
