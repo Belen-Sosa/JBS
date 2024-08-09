@@ -30,7 +30,7 @@ export const Projects = () => {
     {
       title: "SEE",
       description: "Sistema de Encuestas y Estadisticas.",
-      tools: "Laravel | Laravel Jetstream | Inertia | Spatie | Vue3 | Pinia | Vue-Icons | JavaScript | Tailwind CSS | CSS | JsPDF | html2canvas | MySql| Patron MVC |...",
+      tools: "LARAVEL | LARAVEL JETSTREAM | INERTIA | SPATIE | VUE3 | PINIA | VUE-ICONS | JS | TAILWIND CSS | CSS | JSPDF | HTML2CANVAS | MYSQL |  MVC |...",
       imgUrl: projImg3,
       github: "https://github.com/Belen-Sosa/JBS"
 
