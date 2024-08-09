@@ -634,6 +634,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-weight: 400;
     letter-spacing: 0.1px;
     padding: 8px 5px;
+    margin-right: 50%;
 
   }
 
