@@ -8,7 +8,7 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
      
-          <Col size={12} sm={6}>
+          <Col size={12} sm={6} className="footer-h1">
             <h1>JBS</h1>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">

@@ -216,6 +216,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 
 
+
 }
 .banner .tagline {
   font-weight: 700;
@@ -290,7 +291,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: -60px;
 }
 .skills-img{
-  padding: 3% 10%;
+  padding: 3% 0%;
 }
 .skill h2 {
 	font-size: 45px;
@@ -319,6 +320,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
+
 
 /************ Projects Css ************/
 .project {
@@ -481,6 +483,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
+
+
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
@@ -516,4 +520,168 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .logo{
   text: #fff;
+}
+
+
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+  /* Ajustar el banner */
+  .banner {
+    padding: 50% 0 20% 0;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .banner img {
+    width: 100%;
+  }
+
+  /* Ajustar la barra de navegación */
+  nav.navbar {
+    padding: 10px 0;
+  }
+
+  nav.navbar a.navbar-brand {
+    width: 20%;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+
+  /* Ajustar los botones */
+  .navbar-text button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* Ajustar secciones de proyectos */
+  .project {
+    padding: 50px 0;
+  }
+
+  .project p {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .project .nav.nav-pills {
+    width: 100%;
+  }
+
+  .project .nav.nav-pills .nav-link {
+    font-size: 14px;
+  }
+
+  .proj-imgbx {
+    margin-bottom: 20px;
+  }
+
+  .proj-imgbx img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ajustar el footer */
+  .footer {
+    padding: 0 0 20px 0;
+  }
+
+  .newsletter-bx {
+    padding: 40px 30px;
+    margin-bottom: 40px;
+    margin-top: -60px;
+  }
+
+  .newsletter-bx h3 {
+    font-size: 20px;
+  }
+
+  .footer img {
+    width: 50%;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (por ejemplo, móviles) */
+@media (max-width: 480px) {
+  .banner {
+    background-position-x: 70%;
+  
+  }
+
+  .banner h1 {
+    font-size: 30px;
+  }
+
+  .banner button {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  .banner .tagline {
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    padding: 8px 5px;
+
+  }
+
+ 
+  
+
+
+  .skill {
+    padding: 10% 0 50px 0;
+    position: relative;
+   
+   
+  }
+  .skill-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 20px;
+    padding-left: 2.5%;
+
+  }
+  .skills-img{
+    display:flex;
+    padding-bottom: 10% ;
+    padding-top: 10% ;
+
+   
+  }
+  .skill h2 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .skill p {
+      color: #B8B8B8;
+      font-size: 18px;
+      letter-spacing: 0.8px;
+      line-height: 1.5em;
+      margin: 10px 0 50px 0;
+  }
+  .skill-slider {
+    width: 20%;
+    margin: 0 ;
+    position: relative;
+  }
+  
+  .footer-h1{
+    padding-top: 5%;
+    margin-left: 43%;
+  }
+  
 }
