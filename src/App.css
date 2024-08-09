@@ -526,6 +526,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .logo{
+
   text: #fff;
 }
 
@@ -562,7 +563,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   nav.navbar .navbar-nav .nav-link.navbar-link {
     padding: 0 15px;
-    font-size: 14px;
+    padding-top: 1% ;
+
+    font-size: 10px;
   }
 
   /* Ajustar los botones */
