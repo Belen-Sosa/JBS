@@ -690,4 +690,66 @@ body, html {
 }
 
 
+.button-cv{
+color:red;
+}
 
+
+
+/* ESTILOS DE BOTON DESCARGAR CV*/
+.button-container {
+  margin-top: 3%;
+  display: inline-block;
+  margin-left: 14px;
+}
+
+
+.button-cv {
+  width: 150px; /* Ajusta el ancho según sea necesario */
+  height: 42px; /* Altura del botón */
+
+  background:linear-gradient(90.21deg, rgba(70, 38, 86, 0.5) -5.91%, rgba(27, 18, 66, 0.5) 111.58%);
+  display: inline-flex;
+  color:#fff;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-decoration: none; /* Eliminar subrayado */
+
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.button-cv::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background:linear-gradient(90.21deg, rgba(91, 50, 111, 0.5) -5.91%, rgba(44, 30, 109, 0.5) 111.58%);
+  color: white;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-cv:hover::before {
+  transform: scale(1);
+  color: white;
+}
+
+/* Estilo del texto dentro del botón */
+.button-cv span {
+  color: white;
+  display: block;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.button-cv:hover span {
+  color: white;
+
+}

@@ -75,13 +75,17 @@ export const Banner = () => {
                     innovación y el aprendizaje continuo.
                   </p>
                
-                  <Button
-                    variant="primary"
-                    href="/public/cv-SosaJorgelinaBelen.pdf" 
-                    download="CV-JorgelinaBelenSosa.pdf" 
-                  >
-                    Descargar CV
-                  </Button>
+             
+                  <div className="button-container">
+                    <a
+                      className="button-cv"
+                      href="http://localhost:3000/assets/CVSosaJorgelinaBelen.pdf"
+                      download="CV-JorgelinaBelenSosa.pdf"
+                    >
+                      <span>Descargar CV</span>
+                    </a>
+                  </div>
+              
                 </div>
               )}
             </TrackVisibility>
