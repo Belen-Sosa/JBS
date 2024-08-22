@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
+import { Container, Row, Col, Button } from "react-bootstrap"; // Importa el componente Button
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -75,6 +74,14 @@ export const Banner = () => {
                     lista para contribuir en un entorno laboral que fomente la
                     innovación y el aprendizaje continuo.
                   </p>
+               
+                  <Button
+                    variant="primary"
+                    href="/public/cv-SosaJorgelinaBelen.pdf" 
+                    download="CV-JorgelinaBelenSosa.pdf" 
+                  >
+                    Descargar CV
+                  </Button>
                 </div>
               )}
             </TrackVisibility>
