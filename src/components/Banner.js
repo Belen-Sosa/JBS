@@ -48,7 +48,16 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-
+  const handleDownload = (e) => {
+    // Previene la recarga de la página
+    e.preventDefault();
+    
+    // Verifica que el archivo exista y realiza la descarga
+    const link = document.createElement('a');
+    link.href = "/assets/CVSosaJorgelinaBelen.pdf"; // Asegúrate de que la ruta sea correcta
+    link.download = "CV-JorgelinaBelenSosa.pdf";
+    link.click();
+  };
   return (
     <section className="banner" id="home">
       <Container>
@@ -78,9 +87,9 @@ export const Banner = () => {
              
                   <div className="button-container">
                     <a
-                      className="button-cv"
-                      href="http://localhost:3000/assets/CVSosaJorgelinaBelen.pdf"
-                      download="CV-JorgelinaBelenSosa.pdf"
+                      href="#" 
+                      className="button-cv" 
+                      onClick={handleDownload}
                     >
                       <span>Descargar CV</span>
                     </a>
