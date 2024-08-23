@@ -13,7 +13,7 @@ export const Projects = () => {
     {
       title: "Sistema de Gestion",
       description: "Sistema de gestion para un mercado multirubro.",
-      tools: "HTML, CSS, BOOTSTRAP,JS,JQUERY,AJAX,MYSQL ",
+      tools: "HTML | CSS | BOOTSTRAP | JS | JQUERY | AJAX | MYSQL ",
       imgUrl: projImg1,
       github: "https://github.com/Belen-Sosa/sistemaGestion"
 
