@@ -32,7 +32,7 @@ export const Projects = () => {
       description: "Sistema de Encuestas y Estadisticas.",
       tools: "LARAVEL | LARAVEL JETSTREAM | INERTIA | SPATIE | VUE3 | PINIA | VUE-ICONS | JS | TAILWIND CSS | CSS | JSPDF | HTML2CANVAS | MYSQL |  MVC |...",
       imgUrl: projImg3,
-      github: "https://github.com/Belen-Sosa/JBS"
+      github: "https://github.com/Belen-Sosa/SeeLaravelVueAdmin"
 
     }
    

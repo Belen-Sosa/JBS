@@ -41,8 +41,9 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Habilidades</h2>
+              <h2>Habilidades Técnicas</h2>
               <p>
+                He estudiado y obtenido el titulo de la carrera de Analista de Sistemas y tambien un titulo intermedio de Analista Programador.<br/>
                 Poseo paciencia y habilidad para abordar problemas
                 con soluciones innovadoras, respaldado por una
                 comunicación efectiva y una colaboración activa , 

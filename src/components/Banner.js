@@ -7,10 +7,10 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(100 - Math.random() * 50);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Desarrollo Web", "Desarrollo Full-Stack"];
-  const period = 2000;
+  const toRotate = ["Desarrolladora Web"];
+  const period = 1000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -72,14 +72,14 @@ export const Banner = () => {
                   }
                 >
                   <span className="tagline">Bienvenido a mi Portafolio</span>
-                  <h1>{`Hola! soy desarrolladora.`}</h1>
+                  <h1>{`Hola! Soy Belen`}</h1>
                   <h2>
                     <span className="txt-rotate" dataPeriod="1000">
                       <span className="wrap">{text}</span>
                     </span>
                   </h2>
                   <p>
-                    Soy una apasionada desarrolladora de software. Comprometida
+                    Soy una Analista de Sistemas enfocada en el desarrollo  web. Comprometida
                     con aprender y crecer en el campo. Creativa, resuelta y
                     lista para contribuir en un entorno laboral que fomente la
                     innovación y el aprendizaje continuo.

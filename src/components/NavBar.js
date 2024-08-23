@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.png';
 
 import {
   BrowserRouter as Router
@@ -49,6 +50,7 @@ export const NavBar = () => {
             <span className="navbar-text">
               <div className="social-icon hidden">
                 <a href="https://www.linkedin.com/in/jorgelina-belen-sosa/" rel="noopener noreferrer" target="_blank"><img src={navIcon1} alt="" /></a>
+                <a href="https://github.com/Belen-Sosa" rel="noopener noreferrer" target="_blank"><img src={navIcon2} alt="" /></a>
       
               </div>
            
