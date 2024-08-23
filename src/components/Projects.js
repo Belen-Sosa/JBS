@@ -13,7 +13,7 @@ export const Projects = () => {
     {
       title: "Sistema de Gestion",
       description: "Sistema de gestion para un mercado multirubro.",
-      tools: "HTML | CSS | BOOTSTRAP | JS | JQUERY | AJAX | MYSQL ",
+      tools: "HTML - CSS - BOOTSTRAP - JS - JQUERY - AJAX - MYSQL ",
       imgUrl: projImg1,
       github: "https://github.com/Belen-Sosa/sistemaGestion"
 
@@ -21,7 +21,7 @@ export const Projects = () => {
     {
       title: "JBS",
       description: "Pagina personal.",
-      tools: "HTML | CSS | BOOTSTRAP | REACTJS ",
+      tools: "HTML - CSS - BOOTSTRAP - REACTJS ",
       imgUrl: projImg2,
       github: "https://github.com/Belen-Sosa/JBS"
 
@@ -30,7 +30,7 @@ export const Projects = () => {
     {
       title: "SEE",
       description: "Sistema de Encuestas y Estadisticas.",
-      tools: "LARAVEL | LARAVEL JETSTREAM | INERTIA | SPATIE | VUE3 | PINIA | VUE-ICONS | JS | TAILWIND CSS | CSS | JSPDF | HTML2CANVAS | MYSQL |  MVC |...",
+      tools: "LARAVEL - JETSTREAM - INERTIA - VUE3 - PINIA  - JS - TAILWIND - CSS - MYSQL -  MVC ...",
       imgUrl: projImg3,
       github: "https://github.com/Belen-Sosa/SeeLaravelVueAdmin"
 
