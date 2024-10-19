@@ -79,7 +79,7 @@ export const Banner = () => {
                     </span>
                   </h2>
                   <p>
-                  Soy Desarrolladora Web, graduada de la carrera de Analista de Sistemas. 
+                  Graduada de la carrera de Analista de Sistemas me enfoco en el Desarrollo Web. 
                   Estoy comprometida con el aprendizaje y el crecimiento profesional en el campo del desarrollo.
                   Creativa, resolutiva y lista para contribuir en un entorno laboral que promueva la innovación y el aprendizaje continuo.
                   </p>
