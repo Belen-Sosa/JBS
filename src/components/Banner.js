@@ -54,8 +54,8 @@ export const Banner = () => {
     
     // Verifica que el archivo exista y realiza la descarga
     const link = document.createElement('a');
-    link.href = "/JBS/assets/CVSosaJorgelinaBelen.pdf"; 
-    link.download = "CV-SosaJorgelinaBelen.pdf";
+    link.href = "/JBS/assets/CvSosaJorgelinaBelen.pdf"; 
+    link.download = "CvSosaJorgelinaBelen.pdf";
     link.click();
    
   };
