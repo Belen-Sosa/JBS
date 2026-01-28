@@ -46,7 +46,7 @@ export const Projects = () => {
           <Col size={12}>
         
               <div >
-                <h2>Proyectos</h2>
+                <h2>Proyectos personales</h2>
                 <p></p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">

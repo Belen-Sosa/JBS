@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap"; // Importa el componente Button
+import { Container, Row, Col } from "react-bootstrap"; // Importa el componente Button
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -8,7 +8,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(100 - Math.random() * 50);
-  const [index, setIndex] = useState(1);
+  const [_index, setIndex] = useState(1);
   const toRotate = ["Desarrolladora Web"];
   const period = 1000;
 
@@ -54,7 +54,7 @@ export const Banner = () => {
     
     // Verifica que el archivo exista y realiza la descarga
     const link = document.createElement('a');
-    link.href = "/JBS/assets/CvSosaJorgelinaBelen.pdf"; 
+    link.href = "/JBS/public/assets/CVSosaJorgelinaBelen.pdf"; 
     link.download = "CvSosaJorgelinaBelen.pdf";
     link.click();
    

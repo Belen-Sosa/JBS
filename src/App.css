@@ -696,6 +696,8 @@ color:red;
 
 
 
+
+
 /* ESTILOS DE BOTON DESCARGAR CV*/
 .button-container {
   margin-top: 3%;
@@ -752,4 +754,9 @@ color:red;
 .button-cv:hover span {
   color: white;
 
+}
+
+
+.works {
+  background-color: rgb(255 255 255 / 10%);
 }
