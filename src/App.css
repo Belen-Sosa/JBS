@@ -1,0 +1,115 @@
+* {
+  font-family: "", monospace;
+
+}
+.page {
+  margin: 0;
+}
+
+
+
+.image-section {
+  min-height: 300vh; 
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;        
+  background-position: top center;
+
+  position: relative;
+}
+
+.content {
+  min-height: 100vh;
+  
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.image-section {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* CAPA DE FONDO FIJO */
+.image-section::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: #000;
+  z-index: 0;
+}
+
+/* MANCHA VIOLETA */
+.image-section::after {
+  content: "";
+  position: fixed;
+  top: -200px;
+  left: -150px;
+
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(160, 64, 255, 0.55),
+    transparent 70%
+  );
+
+  filter: blur(120px);
+  z-index: 0;
+}
+
+/* MANCHA BORDO (otra capa) */
+.image-section .glow-bordo {
+  position: fixed;
+  bottom: -250px;
+  right: -200px;
+
+  width: 700px;
+  height: 700px;
+
+  background: radial-gradient(
+    circle,
+    rgba(120, 0, 40, 0.55),
+    transparent 70%
+  );
+
+  filter: blur(140px);
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+
+
+
+.parallax-section {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.parallax-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*FIN CSS */
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.bounce-slow {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+
+
