@@ -5,4 +5,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  base: "https://belen-sosa.github.io/JBS/"
 })
