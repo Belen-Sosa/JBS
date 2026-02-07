@@ -20,7 +20,6 @@
 
 .content {
   min-height: 100vh;
-  
   color: white;
   position: relative;
   z-index: 1;
@@ -49,10 +48,8 @@
   position: fixed;
   top: -200px;
   left: -150px;
-
   width: 600px;
   height: 600px;
-
   background: radial-gradient(
     circle,
     rgba(160, 64, 255, 0.55),
