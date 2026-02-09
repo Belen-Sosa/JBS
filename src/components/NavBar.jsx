@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiMenu, HiX } from "react-icons/hi";
 
 const sections = ["inicio", "skills", "experiencia", "proyectos"];
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,9 +17,7 @@ const NavBar = () => {
           }
         });
       },
-      {
-        threshold: 0.6, // % visible para activarse
-      }
+      { threshold: 0.6 }
     );
 
     sections.forEach((id) => {
@@ -28,64 +28,109 @@ const NavBar = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Bloquear scroll cuando el menú está abierto
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+  }, [menuOpen]);
+
   const linkClass = (id) =>
-    `relative transition ${
+    `relative text-lg font-bold transition ${
       activeSection === id
-        ? "text-purple-400! after:absolute after:-bottom-2 after:left-0 after:w-full after:h-[2px] after:bg-purple-400"
-        : "text-gray-300! hover:text-purple-400!"
+        ? "text-white! after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-purple-400"
+        : "text-white! hover:text-purple-400!"
     }`;
 
+  const label = (id) =>
+    id === "skills"
+      ? "Habilidades técnicas"
+      : id === "experiencia"
+      ? "Experiencia Laboral"
+      : id.charAt(0).toUpperCase() + id.slice(1);
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur border-b border-gray-800">
-      <div className="max-w-7xl mx-auto py-4 flex justify-between items-center">
-        {/* Logo */}
-        <a href="#inicio" className="font-bold text-white! text-4xl">
-          JBS
-        </a>
+    <>
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          {/* Logo */}
+          <a href="#inicio" className="font-bold text-white! text-3xl">
+            JBS
+          </a>
 
-        {/* Links */}
-        <ul className="hidden md:flex gap-8 font-bold text-gray-300">
-          <li>
-            <a href="#inicio" className={linkClass("inicio")}>
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className={linkClass("skills")}>
-              Habilidades técnicas
-            </a>
-          </li>
-          <li>
-            <a href="#experiencia" className={linkClass("experiencia")}>
-              Experiencia Laboral
-            </a>
-          </li>
-          <li>
-            <a href="#proyectos" className={linkClass("proyectos")}>
-              Proyectos
-            </a>
-          </li>
-        </ul>
+          {/* Desktop links */}
+          <ul className="hidden md:flex gap-8 ">
+            {sections.map((id) => (
+              <li key={id}>
+                <a href={`#${id}`} className={linkClass(id)}>
+                  {label(id)}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* CTA */}
-        <div className="gap-x-2">
+          {/* Desktop icons */}
+          <div className="hidden md:flex gap-2 ">
+            <a
+              href="https://github.com/Belen-Sosa"
+              target="_blank"
+              className="p-2 text-white! rounded-full text-2xl bg-gray-700 hover:bg-purple-700 transition"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jorgelina-belen-sosa/"
+              target="_blank"
+              className="p-2 text-white! rounded-full text-2xl bg-gray-700 hover:bg-purple-700 transition"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+
+          {/* Mobile button */}
+          <button
+            className="md:hidden text-white text-3xl z-50"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <HiX /> : <HiMenu />}
+          </button>
+        </div>
+      </nav>
+
+      {/* MOBILE OVERLAY MENU */}
+      <div
+        className={`fixed inset-0  bg-black/95 z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 md:hidden ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {sections.map((id) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            onClick={() => setMenuOpen(false)}
+            className={linkClass(id)}
+          >
+            {label(id)}
+          </a>
+        ))}
+
+        <div className="flex gap-6 pt-6">
           <a
             href="https://github.com/Belen-Sosa"
             target="_blank"
-            className="md:inline-block p-2 rounded-full text-3xl bg-gray-600 mx-2 hover:bg-purple-700 transition"
+            className="p-3 rounded-full text-3xl bg-gray-700 hover:bg-purple-700 transition"
           >
-            <FaGithub className="text-gray-300" />
+            <FaGithub />
           </a>
           <a
             href="https://www.linkedin.com/in/jorgelina-belen-sosa/"
             target="_blank"
-            className="hidden md:inline-block p-2 rounded-full text-3xl bg-gray-600 hover:bg-purple-700 transition"
+            className="p-3 rounded-full text-3xl bg-gray-700 hover:bg-purple-700 transition"
           >
-            <FaLinkedin className="text-gray-300" />
+            <FaLinkedin />
           </a>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 

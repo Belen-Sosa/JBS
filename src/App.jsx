@@ -11,10 +11,13 @@ import Fin from "./components/Fin";
 
 function App() {
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
     const sections = document.querySelectorAll(".parallax-section");
 
     const handleScroll = () => {
-      const triggerBottom = window.innerHeight * 0.8; // punto de activación
+      if (isMobile) return;
+
+      const triggerBottom = window.innerHeight * 0.8;
 
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
@@ -26,29 +29,42 @@ function App() {
         }
       });
     };
-    sections.forEach((section, i) => {
-      const speed = 0.2 + i * 0.1; // cada sección un poco diferente
-      section.style.transform = `translateY(${window.scrollY * speed}px)`;
-    });
+
+    if (!isMobile) {
+      sections.forEach((section, i) => {
+        const speed = 0.15 + i * 0.08;
+        section.style.transform = `translateY(${window.scrollY * speed}px)`;
+      });
+    } else {
+      sections.forEach((section) => {
+        section.classList.add("visible");
+        section.style.transform = "none";
+      });
+    }
+
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // inicial para activar secciones que ya estén en pantalla
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <main className="page">
+    <main className="page ">
       {/* Fondo fijo + glows */}
       <div className="image-section">
         <div className="glow-bordo" />
-
+        <div style={{ overflow: "hidden", width: "100vw" }}>
         <Snowfall
           style={{
             position: "fixed",
             inset: 0,
+            width: "100vw",
+            height: "100vh",
+            overflow: "hidden",
             zIndex: 0,
           }}
         />
-
+        </div>
         <section className="content">
           <NavBar />
           <div className="dragon" />
@@ -63,7 +79,6 @@ function App() {
           <div className="parallax-section">
             <ExperienciaLaboral />
           </div>
-     
 
           <div className="parallax-section">
             <ProyectosPersonales />
@@ -72,7 +87,6 @@ function App() {
             <Fin />
           </div>
           <Footer />
-
         </section>
       </div>
     </main>

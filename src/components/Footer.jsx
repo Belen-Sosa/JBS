@@ -3,32 +3,37 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <nav className=" w-full z-[1000] bg-black/90  border-t  border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <footer className="w-full bg-black/90 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+
         {/* Logo */}
-        <a href="#inicio" className=" font-bold text-white! text-4xl">
+        <a
+          href="#inicio"
+          className="font-bold text-2xl md:text-4xl text-white"
+        >
           JBS
         </a>
 
-        {/* CTA */}
-        <div>
+        {/* Social */}
+        <div className="flex gap-4">
           <a
             href="https://github.com/Belen-Sosa"
-            className=" md:inline-block p-2 rounded-full text-3xl  bg-gray-600  text-center text-white  hover:bg-purple-700 transition"
             target="_blank"
+            className="p-3 rounded-full text-2xl bg-gray-700 hover:bg-purple-700 transition"
           >
             <FaGithub className="text-gray-300" />
           </a>
+
           <a
             href="https://www.linkedin.com/in/jorgelina-belen-sosa/"
             target="_blank"
-            className="hidden md:inline-block p-2 rounded-full text-3xl mx-2   bg-gray-600  text-center  text-white hover:bg-purple-700 transition"
+            className="p-3 rounded-full text-2xl bg-gray-700 hover:bg-purple-700 transition"
           >
             <FaLinkedin className="text-gray-300" />
           </a>
         </div>
       </div>
-    </nav>
+    </footer>
   );
 };
 

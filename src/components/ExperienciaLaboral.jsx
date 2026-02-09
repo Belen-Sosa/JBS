@@ -28,49 +28,70 @@ const ExperienciaLaboral = () => {
     ,
   ];
   return (
-    <div className="flex flex-col  justify-content-center text-center pt-30  h-screen" id={"experiencia"}>
-      <p className="text-4xl bg-gradient-to-r from-red-300 to-purple-500 bg-clip-text font-bold text-transparent">
-        Experiencia laboral
-      </p>
-      <div className="bg-gray-950 border border-gray-700 rounded-md mx-5 mt-10   ">
-        {experiencie.map((skill, index) => (
-          <div className=" m-5 rounded-md" key={index}>
-            <div className="text-4xl text-purple-300  flex justify-between ">
-              <div className="flex ">
-                <div className="bg-violet-950 p-2  rounded-md shadow-2xl shadow-violet-300  ">
-                  {" "}
-                  <MdWork className="text-2xl" />{" "}
-                </div>{" "}
-                <p className="mx-2 "> {skill.position}</p>
+    <section
+      id="experiencia"
+      className="min-h-screen px-4 md:px-10 py-20 flex justify-center "
+    >
+      <div className="w-full max-w-6xl">
+        {/* TÍTULO */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-red-300 to-purple-500 bg-clip-text text-transparent">
+          Experiencia laboral
+        </h2>
+  
+        {/* CARD */}
+        <div className="bg-gray-950 border border-gray-700 rounded-xl mt-10 p-4 md:p-8">
+          {experiencie.map((skill, index) => (
+            <div key={index} className="space-y-4">
+  
+              {/* HEADER */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div className="flex items-center gap-3 text-purple-300">
+                  <div className="bg-violet-950 p-2 rounded-md shadow-lg shadow-violet-300/30">
+                    <MdWork className="text-xl md:text-2xl" />
+                  </div>
+                  <p className="text-xl md:text-2xl font-semibold">
+                    {skill.position}
+                  </p>
+                </div>
+  
+                <div className="flex items-center gap-2 text-gray-300 text-sm md:text-base">
+                  <FaCalendar />
+                  <span>{skill.year}</span>
+                </div>
               </div>
-              <div className="flex gap-2">
-                
-               <FaCalendar className="text-sm mt-1" /> <p className="text-base">{skill.year}</p>
-              </div>
+  
+              {/* DESCRIPCIÓN */}
+              <p className="whitespace-pre-line text-sm md:text-base text-justify text-gray-200 leading-relaxed">
+                {skill.description}
+              </p>
+  
+              {/* TECNOLOGÍAS */}
+              {skill.tecnologías && (
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {skill.tecnologías.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="bg-violet-950 border border-violet-600 rounded-full px-3 py-1 text-xs md:text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
-            <p className="whitespace-pre-line text-sm text-justify mx-2">
-              {skill.description}
+          ))}
+  
+          {/* NOTA */}
+          <div className="mt-6 flex items-start gap-2 text-red-300 text-xs md:text-sm">
+            <FaInfoCircle className="mt-0.5" />
+            <p>
+              Los detalles específicos de los proyectos son confidenciales.
+              Las descripciones reflejan el tipo de trabajo realizado.
             </p>
-            {skill.tecnologías && (
-              <div className="flex gap-2 mt-5 flex-wrap  ">
-                {skill.tecnologías.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="bg-violet-950 border border-violet-600 rounded-full p-2 text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
-        ))}
-        <p className="text-red-300 my-5 flex gap-2 text-center items-center mx-2 ml-5 ">
-          <FaInfoCircle />  Los detalles específicos de los proyectos son confidenciales. Las
-          descripciones reflejan el tipo de trabajo realizado.
-        </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
